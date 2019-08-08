@@ -13,13 +13,9 @@
                         <th>Website</th>
                     </tr>
                 </thead>
-                <tr v-for="each in users" :key="each.id">
-                    <td>{{each.id}}</td>
-                    <td><RouterLink :to="'/user/' + each.id">{{each.name}}</RouterLink></td>
-                    <td>{{each.username}}</td>
-                    <td>{{each.email}}</td>
-                    <td>{{each.website}}</td>
-                </tr>
+                <UserListItem 
+                    :key="each.id" v-for="each in users" :user="each" 
+                />
             </table>
         </div>
         <!-- <p v-for="each in users" :key="each.id">{{ each.name }}</p>
@@ -29,9 +25,13 @@
 
 <script>
 import axios from 'axios'
+import UserListItem from '@/components/UserListItem'
 
 const url = 'https://jsonplaceholder.typicode.com/users'
 export default {
+    components: {
+        UserListItem
+    },
     data() {
         return {
             users: []

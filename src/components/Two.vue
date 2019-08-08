@@ -1,11 +1,16 @@
 <template>
     <div class="box">
-        <h3 class="title">Two: {{ doubleCounter * 3}}</h3>
+        <h3 class="title">Two: </h3>
     </div>
 </template>
 
 <script>
 export default {
-    props: ['doubleCounter']
+    // props: {
+    //     foo: {
+    //         required: true,
+    //         type: Number
+    //     }
+    // }
 }
 </script>

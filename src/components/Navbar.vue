@@ -12,5 +12,11 @@
         <RouterLink to="/form">Form</RouterLink>
         {{ ' | ' }}
         <RouterLink to="/nested">Nested</RouterLink>
+        {{ ' | ' }}
+        <RouterLink to="/vuex">Vuex</RouterLink>
+        {{ ' | ' }}
+        <RouterLink to="/chart">Chart</RouterLink>
+        {{ ' | ' }}
+        User: {{$store.getters.userCount}}
     </div>
 </template>

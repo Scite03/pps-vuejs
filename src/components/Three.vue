@@ -1,9 +1,16 @@
 <template>
     <div>
-        <h3>Three</h3>
+        <h3 class="title">Three{{now}}</h3>
+        <slot :now="now">Default Content</slot>
     </div>
 </template>
 
 <script>
-export default {}
+export default {
+    computed: {
+        now() {
+            return new Date()
+        }
+    }
+}
 </script>
