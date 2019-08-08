@@ -1,9 +1,11 @@
 <template>
     <div>
         <h1 class="title">Chart</h1>
-        <button @click="toggle()" class="button">Toggle</button>
+        <button @click="toggle(1)" class="button">Graph 1</button>
+        <button @click="toggle(2)" class="button">Graph 2</button>
+        <button @click="toggle(3)" class="button">Graph 3</button>
         <button @click="get()" class="button">Get</button>
-        <ApexChart ref="myChart" :type="types[idx]" :options="options" :series="series"  />
+        <ApexChart  width="500" ref="myChart" :type="types[idx]" :options="options" :series="series"  />
     </div>
 </template>
 <script>
@@ -16,12 +18,13 @@ export default {
         }
     },
     methods: {
-        toggle() {
-            if (this.idx == this.types.length) {
-                this.idx = 0
-            } else {
-                this.idx += 1
-            }
+        toggle(param) {
+            // if (this.idx == this.types.length) {
+            //     this.idx = 0
+            // } else {
+            //     this.idx += 1
+            // }
+            this.idx = param
         },
         get() {
             this.$refs.myChart.chart.dataURI().then(uri => {
