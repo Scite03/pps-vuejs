@@ -10,5 +10,7 @@
         <RouterLink to="/user">User</RouterLink>
         {{ ' | ' }}
         <RouterLink to="/form">Form</RouterLink>
+        {{ ' | ' }}
+        <RouterLink to="/nested">Nested</RouterLink>
     </div>
 </template>
