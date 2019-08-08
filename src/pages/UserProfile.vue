@@ -4,7 +4,7 @@
         <pre>{{user}}</pre>
     </div>
 </template>
-
+ 
 <script>
 import axios from 'axios'
 const url = 'https://jsonplaceholder.typicode.com/users'
