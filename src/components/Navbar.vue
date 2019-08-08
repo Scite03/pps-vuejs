@@ -1,17 +1,14 @@
 <template>
     <div>
-        <h1 class="tital">Navbar</h1>
-        <p>
-            <RouterLink to="/">One</RouterLink>
-        </p>
-        <p>
-            <RouterLink to="/about">Two</RouterLink>
-        </p>
-        <p>
-            <RouterLink to="/three">Three</RouterLink>
-        </p>
-        <p>
-            <RouterLink to="/user">User</RouterLink>
-        </p>
+        <!-- <h1 class="tital">Navbar</h1> -->
+        <RouterLink to="/">One</RouterLink>
+        {{ ' | ' }}
+        <RouterLink to="/about">Two</RouterLink>
+        {{ ' | ' }}
+        <RouterLink to="/three">Three</RouterLink>
+        {{ ' | ' }}
+        <RouterLink to="/user">User</RouterLink>
+        {{ ' | ' }}
+        <RouterLink to="/form">Form</RouterLink>
     </div>
 </template>
